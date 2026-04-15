@@ -37,9 +37,29 @@ print("result1: ", result1)
 result2 = greeting("Justin")
 print("result2: ", result2)
 
-#(2) Parameters vs Arguments
+# (2) Parameters vs Arguments
+# (3) Keyword & Default arguments
 
 
- 
+print('======= Define vs Call  =========')
+
+# deine
 
 
+# default argument => age=22, agar argument berilmasa, default qiymat 22 boladi
+def give_great(name, age=22):
+    print("give_great is executed")
+    return f"Hi {name}, you are {age} years old!"
+
+
+# call
+reuslt3 = give_great(name="Justin", age=25)  # keyword arguments
+print("result3: ", reuslt3)
+# keyword arguments qoyishimizdan sabab aniqroq tushunish uchun
+
+result3 = give_great("Justin", 25)
+print("result3: ", result3)
+
+# default arguments
+result4 = give_great("john")
+print("result4: ", result4)
