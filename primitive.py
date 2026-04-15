@@ -64,4 +64,27 @@ print(course)
 
 print("======= boolean ========")
 
+# Builtin => functions => type(), input(), bool(), int(), str()
 
+# type() -> bu funksiya malumot turini bilish uchun ishlatiladi
+# input() -> bu funksiya foydalanuvchidan malumot olish uchun ishlatiladi
+# bool() -> bu funksiya malumot turini boolean ga o'zgartirish uchun ishlatiladi
+# int() -> bu funksiya malumot turini integer ga o'zgartirish uchun ishlatiladi
+# str() -> bu funksiya malumot turini string ga o'zgartirish uchun ishlatiladi
+
+y = input("Give your value for y: ")
+print("y: ", y)
+
+
+result = y.isnumeric()
+print(f"the input is numeric: {result}")
+
+# TRUTHY vs FALSY value
+# TRUTHY > True => true, 1, " ", [1,2], {"key": "value"}, (1,2), 
+# FALSY > False => false, 0, "", [], {}, None
+
+test_falsy = "" or False or None
+print("The Falsy value: ", bool(test_falsy))
+
+test_truthy = "hello"
+print("The Truthy value: ", bool(test_truthy))
