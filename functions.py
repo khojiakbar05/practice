@@ -63,3 +63,20 @@ print("result3: ", result3)
 # default arguments
 result4 = give_great("john")
 print("result4: ", result4)
+
+
+# (4) scopes
+print('======= Define vs Call  =========')
+
+b = 100
+
+# define
+
+
+def calculate(a, b):
+    c = a * b
+    print(f"The c value: {c}")
+
+
+# call
+calculate(5, 50)
