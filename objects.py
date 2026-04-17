@@ -43,6 +43,10 @@ try:
     a = car_dict.speed
     result = car_dict["year"]
     print("result: ", result)
+    # ikkala xatolik turini bitta shartda berishimiz uchun mana bunday qiamiz
+    # except (KeyError, AttributeError) as err:      => shukorinishda beriladi
+    '''hamma xatolik turini mujassamlagan bu => (exception) boladi ishlatilish'''
+    # except exception as err:         => mana shu korinishda
 except KeyError as err:
     print("No origin state property found: ", err)
 except AttributeError as err:
