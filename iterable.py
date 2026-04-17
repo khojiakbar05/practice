@@ -49,4 +49,4 @@ for key in person_obj:
    
     # person_obj ichidan keylarni valuesini olish
     print(f"The key after deleting: {key} => value {person_obj[key]}")
-    print(f"the key after del get(): {key} => value {person_obj.get(key)}")
+    print(f"the key after del get(): {key} => value {person_obj.get(key)}") 

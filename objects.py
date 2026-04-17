@@ -2,14 +2,15 @@
    (1) What is object?
    (2) Iterable objects & RANGE
    (3) DICTIONARY
-   (Error handling system
+   (4) Error handling system
 '''
 
 
 import math  # Pythondan mustaqil va python bilan birga keladi va inputni talab qiladigon package hisoblanadi
 import array  # package / module => python bilan birga paralel kun koradi
 
-from math import ceil, asin  # yana bir yoli chaqirishni va packagelari qoshib ketsa boladi va bu methodlarni aniq qilib chaqirib olish used
+# yana bir yoli chaqirishni va packagelari qoshib ketsa boladi va bu methodlarni aniq qilib chaqirib olish used
+from math import ceil, asin
 print("========= WWhat is Object ===========")
 # (1) What is object?
 
@@ -33,3 +34,20 @@ result = ceil(98.7)
 print("result1: ", result)
 
 
+print("========== Error handling System =============")
+
+car_dict = dict(name="Toyota", year=2026, electric=True)
+
+try:
+    print("passed here")
+    a = car_dict.speed
+    result = car_dict["year"]
+    print("result: ", result)
+except KeyError as err:
+    print("No origin state property found: ", err)
+except AttributeError as err:
+    print("No speed found!!!")
+else:
+    print("Executed successfully!")
+finally:  # oxirida ishga tuhadigon. matiqimiz
+    print("Final closing logic")
