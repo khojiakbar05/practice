@@ -6,6 +6,7 @@
 
 # Dunder -> Pythonni ichki  quriliah mexanizmi
 
+# __BUILTINS__ -> print(), type() lar kiradi
 
 message = "PYTHON: Everything is Object"
 print(message)

@@ -80,7 +80,7 @@ result = y.isnumeric()
 print(f"the input is numeric: {result}")
 
 # TRUTHY vs FALSY value
-# TRUTHY > True => true, 1, " ", [1,2], {"key": "value"}, (1,2), 
+# TRUTHY > True => true, 1, " ", [1,2], {"key": "value"}, (1,2),
 # FALSY > False => false, 0, "", [], {}, None
 
 test_falsy = "" or False or None
