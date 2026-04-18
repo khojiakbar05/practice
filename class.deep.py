@@ -1,5 +1,5 @@
 ''' CLASS DEEP DIVE
-       (1) ENCAPSULATION
+       (1) ENCAPSULATION <
        (2) INHERITANCE
        (3) POLYMORRPHISM
 '''
