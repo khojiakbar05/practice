@@ -44,7 +44,7 @@ try:
     result = car_dict["year"]
     print("result: ", result)
     # ikkala xatolik turini bitta shartda berishimiz uchun mana bunday qiamiz
-    # except (KeyError, AttributeError) as err:      => shukorinishda beriladi
+    # except (KeyError, AttributeError) as err:      => shu korinishda beriladi
     '''hamma xatolik turini mujassamlagan bu => (exception) boladi ishlatilish'''
     # except exception as err:         => mana shu korinishda
 except KeyError as err:
