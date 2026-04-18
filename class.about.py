@@ -29,8 +29,8 @@ class Person():
     def say_age(self):
         print(f"{self.name} says: I am {self.age} years old)")
 
-
         # static methodlar:::
+
     @staticmethod
     def explain():
         print("Class: Static method property executed")
@@ -57,3 +57,49 @@ print("new_message: ", new_message)
 
 # static methodni call qilish
 Person.explain()
+
+
+print("========== special/magic methods =============")
+# Pythons most common special methods are below:
+# __init__, __new__, __str__, __call__, __getitem__, __eq__, __len__....
+
+
+class Car():
+    # State
+    description = "This classs makes cars"
+
+    # Constructor
+    def __new__(cls, *args):
+        print("*__new__*")
+        return super().__new__(cls)
+
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+
+    # method
+    def start_engine(self):
+        print(f"{self.name} start engine")
+
+    def stop_engine(self):
+        print(f"{self.name} stop engine")
+
+    def __str__(self):
+       return f"{self.name} was produced {self.year}"
+    
+    def __call__(self):
+        print("Object called like function!!!")
+        return True
+
+
+my_car = Car("Ferrari", 2025)
+my_car.start_engine()
+my_car.stop_engine()
+
+
+print("-----")
+your_car = Car("Toyota", 2026)
+print(your_car)
+
+response = your_car() # Functionga oxshab ishga tushurish
+print("response: ", response)
