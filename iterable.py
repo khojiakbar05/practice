@@ -31,7 +31,8 @@ print("age: ", age)
 # print("name: ", name)
 # dictionaryni ichida yoq bolgan keyni tanlasak xatolik beradi
 
-# nethod: get()
+# method: get()
+# get() -> methodi orqali ham objectdagi malumotlarimizni olishimiz mumkin
 name = person_obj.get("name")
 hobby = person_obj.get("xobby")
 balance = person_obj.get("balance", 0)

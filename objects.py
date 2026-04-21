@@ -14,7 +14,7 @@ from math import ceil, asin
 print("========= WWhat is Object ===========")
 # (1) What is object?
 
-# Object => Ma'lum bir maqsadda yaratilgan va ozini bir qator method ha,da propertylaridan tashkil topgan data type hisoblanadi.
+# Object => Ma'lum bir maqsadda yaratilgan va ozini bir qator method hamda propertylaridan tashkil topgan data type hisoblanadi.
 # Everything is objet in PYTHON
 
 print(type("Hello World"))
