@@ -66,3 +66,15 @@ print("------")
 calculate(0, 2, 300)
 print("------")
 calculate(5, 7)
+
+
+# **kwargs > dictionary orqali xosil bolgan tupleni yoyish
+def introduce(*args, **kwargs):
+    print(f"the type(**kwargs) value: {type(kwargs)}")
+    print(f"Hi, I'm {kwargs["name"]} and I am {kwargs["age"]} years old")
+    pass
+
+# call 
+introduce(name="Justin", age=25)
+introduce(name="Shawn", age=30, single=True)
+    
