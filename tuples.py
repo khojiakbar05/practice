@@ -92,5 +92,16 @@ greeting("hi", True, 10, name="John", age=22)
 # ( **kwargs ) name="John", age=22  => bu qiymatlarimiz keyword dictionary korinishida qabul qilinadi 
 
 
+print("======== zip =========")
+tuple1 = (1, 2, 3, 4)
+tuple2 = ('a', 'b', 'c', 'd')
+
+zipped = zip(tuple1, tuple2)
+print("zipped: ", zipped)
+result = list(zipped)
+print(f"the result: {result}")
+
+
+
 
 
