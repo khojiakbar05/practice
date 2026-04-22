@@ -24,9 +24,7 @@ print("before fruits: ", fruits)
 fruits[2] = "melon"
 print("after fruits: ", fruits)
 
-
-
-  #  TUPLE
+#  TUPLE
 # tupleni qiymatini ozgartira olmaymiz
 
 animals = ("dog", "cat", "fish", "lion")
@@ -34,7 +32,37 @@ print("animals: ", animals)
 tuple_obj = ("MIT", 100, True, None)
 print("before tuple_obj: ", tuple_obj)
 
-animals[0] = "bird"
-print("after tuple_obj: ", tuple_obj)
+# animals[0] = "bird"
+# print("after tuple_obj: ", tuple_obj)
 
 
+# try void these:
+people = "Andrew", "John"
+animals = "dog",
+
+print("======== Unpacking Arguments =========")
+groups = ["MIT", "FLEX", "DEVEX", "MG"]
+(x, y, a, z) = groups
+# *z -> bu x va y ga tepadan qiymatlarni oladi va *ga qolga qiymatlarni kiritvoradi
+(x, y, *z) = groups
+print(f"the x: {x} and y: {y}")
+print("z: ", z)
+
+
+# *args > tuple degani
+
+def calculate(*args):
+    total = 1
+    for x in args:
+       total *= x
+    print(f"the type(args) value: {type(args)}")
+    print(f"the total value: {total}")
+    return total
+
+
+# call
+calculate(1, 7, 2, 3)
+print("------")
+calculate(0, 2, 300)
+print("------")
+calculate(5, 7)
