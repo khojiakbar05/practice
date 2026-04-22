@@ -88,8 +88,8 @@ def greeting(*args, **kwargs):
 
 # Call
 greeting("hi", True, 10, name="John", age=22)
-# "hi", True, 10,      => bu qiymatlar tuple korinishida qabul qilinadi
-# name="John", age=22  => bu qiymatlarimiz keyword dictionary korinishida qabul qilinadi 
+# ( *args )    "hi", True, 10,      => bu qiymatlar tuple korinishida qabul qilinadi
+# ( **kwargs ) name="John", age=22  => bu qiymatlarimiz keyword dictionary korinishida qabul qilinadi 
 
 
 
