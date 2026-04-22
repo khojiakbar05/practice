@@ -77,4 +77,20 @@ def introduce(*args, **kwargs):
 # call 
 introduce(name="Justin", age=25)
 introduce(name="Shawn", age=30, single=True)
+
+print("------")
+
+
+def greeting(*args, **kwargs):
+    print("*args: ", args)
+    print("**kwargs: ", kwargs)
     
+
+# Call
+greeting("hi", True, 10, name="John", age=22)
+# "hi", True, 10,      => bu qiymatlar tuple korinishida qabul qilinadi
+# name="John", age=22  => bu qiymatlarimiz keyword dictionary korinishida qabul qilinadi 
+
+
+
+
