@@ -117,3 +117,55 @@ people.sort(key=lambda person: person[1])
 print("People(2) ", people)
 
 
+print("======== Enumerate, map and filter =========")
+# Enumerate for index & value qabul qilish
+
+animals = ["dog", "cat"]
+for element in enumerate(animals):   # valueni Indexini ham oilib beradi
+     print("element: ", element)
+
+
+print("--------")
+for (index, value) in enumerate(animals):   # 
+    print(f"the index: {index}, value: {value}")
+
+
+
+# similar in dictionary
+car_obj = dict(brand="Ferrari", year=2025)
+# result = car_obj.get("brand")
+result = car_obj.items()  # tuple korinishida qaytaradi
+for (key, value) in result:
+    print(f"the key: {key}, value: {value}")
+
+
+print("---- map ----")
+# map
+cars = [
+    ("Ferrari", 78),
+    ("Toyota", 87),
+    ("Audi", 116),
+    ("BMW", 109),
+    ("Pagani", 33)
+]
+
+new_cars = []
+for car in cars:
+    new_cars.append(car[0])
+print("new_cars(1) ", new_cars)
+
+
+result1 = map(lambda car: car[0], cars)
+print(f"the result1: {result1} and type: {type(result1)}")
+
+new_cars = list(result1)
+print("new_cars(2)", new_cars)
+
+
+print("---- filter ----")
+# filter
+
+result_filter = filter(lambda car: car[1] > 80, cars)
+print(f"the result_filter: {result_filter} and type: {type(result_filter)}")
+print(list(result_filter))
+
