@@ -29,6 +29,7 @@ for key in car_obj:
     print(f"the key: {key} => value: {car_obj.get(key)}")
 
     print("-------")
+    
 for x in range(1, 20, 5):
     print(f"the {x}")
 

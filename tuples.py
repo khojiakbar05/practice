@@ -40,7 +40,9 @@ print("before tuple_obj: ", tuple_obj)
 people = "Andrew", "John"
 animals = "dog",
 
+
 print("======== Unpacking Arguments =========")
+
 groups = ["MIT", "FLEX", "DEVEX", "MG"]
 (x, y, a, z) = groups
 # *z -> bu x va y ga tepadan qiymatlarni oladi va *ga qolga qiymatlarni kiritvoradi
