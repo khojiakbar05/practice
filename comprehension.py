@@ -10,7 +10,7 @@ print("========== What is comprehension & list comprehension ============")
 ''' Comprehension general syntax:
        a) *iterable
        b) <expression> for item in iterable
-       c) <expression> for item in iterable <consition>
+       c) <expression> for item in iterable <condition>
 '''
 
 # list comprehensions: a)
