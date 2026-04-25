@@ -13,12 +13,12 @@ print("========= Python Packages & Core Packages =========")
 # Core packageslar PYTHONNI ozi bilan birga keladi
 
 # Core packages
-# t = turtle.Turtle()
-# t.shape("turtle")
-# t.speed(1)
-# t.circle(100)
+t = turtle.Turtle()
+t.shape("turtle")
+t.speed(1)
+t.circle(100)
 
-# turtle.done()
+turtle.done()
 
 print("-------")
 my_file = open("material/message.txt", "r")
@@ -52,3 +52,17 @@ with Image.open("material/logo.png") as img_obj:
     resized_img = img_obj.resize((200, 200))
     resized_img.show()
     resized_img.save("material/sample.png")
+
+
+print("========= Debugging =========")
+
+
+def get_summary(*args): # define
+    total_amount = 0
+    for a in args:
+        total_amount +=a
+        return total_amount  # Find the bug via debugging
+
+test = 100
+result = get_summary(1, 2, 3, 4, 5) # call
+print("result: ", result)
