@@ -15,7 +15,7 @@ print("========== What is comprehension & list comprehension ============")
 
 # list comprehensions: a)
 numbers = [1, 2, 4, 2, 1, 20]
-list_numbers = [*numbers]  # a version
+list_numbers = {*numbers}  # a version
 # list_numbers = numbers   -> bu holatda referencei bir hil boladi va true qaytaradi
 print("list_numbers: ", list_numbers)
 print(numbers is list_numbers)

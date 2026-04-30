@@ -141,52 +141,177 @@
 # print(list(res_filter))
 
 
-print("============= ARRAY ===============")
-from array import array
+# print("============= ARRAY ===============")
+# from array import array
 
-numbers = array("i", [1, 4, 3, 34, 54, 4])
-print(numbers)
+# numbers = array("i", [1, 4, 3, 34, 54, 4])
+# print(numbers)
 
-numbers.insert(3, 100)
-print(numbers)
+# numbers.insert(3, 100)
+# print(numbers)
 
-del numbers[0:3]
-print(numbers)
-
-
-numbs = array("i", [23, 1, 4, 6, 54, 67, 4, 4, 1, 67, 23])
-numbs_set = set(numbs)
-print("numbs_set: ", numbs_set)
+# del numbers[0:3]
+# print(numbers)
 
 
-a = {20, 30, 40, 50}
-b = {40, 50, 60}
-
-result1 = a | b
-result2 = a & b
-result3 = a - b
-result4 = a ^ b
+# numbs = array("i", [23, 1, 4, 6, 54, 67, 4, 4, 1, 67, 23])
+# numbs_set = set(numbs)
+# print("numbs_set: ", numbs_set)
 
 
-print("result1 | : ", result1)
-print("result2 & : ", result2)
-print("result3 - : ", result3)
-print("result4 ^ : ", result4)
+# a = {20, 30, 40, 50}
+# b = {40, 50, 60}
+
+# result1 = a | b
+# result2 = a & b
+# result3 = a - b
+# result4 = a ^ b
+
+
+# print("result1 | : ", result1)
+# print("result2 & : ", result2)
+# print("result3 - : ", result3)
+# print("result4 ^ : ", result4)
 
 
 
-def greeting(*args, **kwargs):
-       print("*args: ", args)
-       print("**kwargs: ", kwargs)
+# def greeting(*args, **kwargs):
+#        print("*args: ", args)
+#        print("**kwargs: ", kwargs)
 
 
-greeting("hi", 12, True, name="Khoji")
+# greeting("hi", 12, True, name="Khoji")
 
-tuple1 = (1, 2, 3, 4, 5)
-tuple2 = (11, 21, 31, 41, 51, 61)
+# tuple1 = (1, 2, 3, 4, 5)
+# tuple2 = (11, 21, 31, 41, 51, 61)
 
-zipped = zip(tuple1, tuple2)
-print(zipped)
-print(list(zipped))
+# zipped = zip(tuple1, tuple2)
+# print(zipped)
+# print(list(zipped))
 
 
+# list comprehensions: a)
+numbers = [1, 2, 4, 2, 1, 20]
+list_numbers = [*numbers]
+
+print(f"list_numbers: {list_numbers}, and type: {type(list_numbers)}")
+print(numbers is list_numbers)
+
+print(id(numbers), id(list_numbers))
+
+list_numbers = numbers
+print(id(numbers), id(list_numbers))
+print(numbers is list_numbers)
+
+
+# list comprehensions: b)
+people = [("Robert", 20), ("Steve", 19), ("Joseph", 25)]
+# list_people = map(lambda person: person[0], people)
+# print("people's name: ", list(list_people))
+list_person = [person[1] for person in people]
+print(list_person)
+
+
+# list comprehensions: c)
+cars = [
+    ("Ferrari", 78),
+    ("Toyota", 87),
+    ("Audi", 116),
+    ("BMW", 109),
+    ("Pagani", 33)
+]
+
+# list_cars = [car[0] for car in cars]
+# print("list_cars: ", list_cars)
+
+# list_cars = map(lambda car: car[0], cars)
+# print("list car in lambda: ",  list(list_cars))
+
+
+print("========== Set and List comprehension ============")
+
+numbs = [1, 5, 4, 20, 4, 5, 1, 4]
+set_numbers = {*numbs}
+
+print(f"set_numbers: {set_numbers}, and type: {type(set_numbers)}")
+
+
+# b version
+dict_person_list = [person[0] for person in people]
+print(f"dict_person_list: {dict_person_list}, and type: {type(dict_person_list)}")
+
+dict_person_dict = {person[0]: person[1] for person in people}
+print(f"dict_person_dict: {dict_person_dict}, and {type(dict_person_dict)}")
+
+
+# c version
+dict_person = {person[0]: person[1] for person in people if person[1] > 20}
+print(f"dict_person: {dict_person}, and type: {type(dict_person)}")
+
+dict_person_filter = filter(lambda person: person[1] > 20, people)
+print(f"dict_person_filter: {list(dict_person_filter)} and type: {type(dict_person_filter)}")
+
+
+import turtle
+
+# Ekranni sozlash
+screen = turtle.Screen()
+screen.bgcolor("#f0f8ff")
+screen.title("Python Turtle Pizza")
+
+t = turtle.Turtle()
+t.speed(13)  # Eng tez chizish
+
+
+def draw_circle(radius, color, border_color, x, y):
+    t.penup()
+    t.goto(x, y - radius)
+    t.pendown()
+    t.color(border_color, color)
+    t.begin_fill()
+    t.circle(radius)
+    t.end_fill()
+
+
+# 1. Pissa xamiri (Crest)
+draw_circle(160, "#D2691E", "#8B4513", 0, 0)
+
+# 2. Pishloq va sous (Cheese)
+draw_circle(145, "#FFD700", "#FF8C00", 0, 0)
+
+# 3. Pissa bo'laklari (Slices)
+t.color("#8B4513")
+t.pensize(2)
+for i in range(8):
+    t.penup()
+    t.goto(0, 0)
+    t.setheading(i * 45)
+    t.pendown()
+    t.forward(145)
+
+# 4. Pepperoni (Kolbasalar)
+pepperoni_locs = [
+    (60, 60), (-60, 60), (60, -60), (-60, -60),
+    (100, 0), (-100, 0), (0, 100), (0, -100)
+]
+for x, y in pepperoni_locs:
+    draw_circle(20, "#B22222", "#800000", x, y)
+
+# 5. Zaytun donachalari (Olives)
+olive_locs = [
+    (30, 30), (-30, 30), (30, -30), (-30, -30),
+    (80, 40), (-80, -40), (40, 80), (-40, -80)
+]
+for x, y in olive_locs:
+    draw_circle(5, "#2F4F4F", "black", x, y)
+
+# Markazdagi kichik turtle belgisi (Oshpaz)
+t.penup()
+t.goto(0, -10)
+t.color("green")
+t.shape("turtle")
+t.stamp()
+
+t.hideturtle()
+print("Pissa tayyor! Yoqimli ishtaha!")
+turtle.done()
