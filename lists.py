@@ -15,7 +15,6 @@ for team in groups:
     print(f"the team {team}")
 
 
-
 # COnstructor
 letters = list("HEllo World!")
 print(f"the letters: {letters} and size: {len(letters)}")
@@ -25,7 +24,7 @@ fruits = ["apple", "orange", "lemon", "kiwi"]
 a = fruits[0]
 b = fruits[0:2]  # 0 dan 2 gacha olib beradi
 c = fruits[::3]  # 0 ni oladi va orada 2ta index tashlab ketib 3 chini oladi
-d = fruits[::-1] # teskari holatda listimizni qaytaradi
+d = fruits[::-1]  # teskari holatda listimizni qaytaradi
 
 print("a: ", a)
 print("b: ", b)
@@ -38,7 +37,7 @@ print("======== List methods =========")
 
 # Mutable(ozgaradi) => append(), insert(), pop(), remove(), clear(), sort()
 # Immutable => index(),  sorted()
- 
+
 letters = ["a", "b", "d"]
 letters.append("c")   # oxiridan list qoshadi
 print(f"the append result {letters}")
@@ -47,9 +46,9 @@ print(f"the append result {letters}")
 letters.insert(0, "z")   # listni oldiga qiymat qoshadi
 print(f"the insert result: {letters}")
 
-size = len(letters) -1
+size = len(letters) - 1
 result = letters.pop(size)  # pop listni oxiridan qiymatni  qirqib oladi
-print(f"the pop result: {result} and letter: {letters}") 
+print(f"the pop result: {result} and letter: {letters}")
 
 
 result2 = letters.pop(0)  # pop listimizni birinchi qiymatini olib beradi
@@ -65,7 +64,7 @@ animals.remove("lion")   # listni qiymatini ochirib tashlaydi
 print("remove: ", animals)
 
 
-del animals[2:4]   # del belgilangan indexlar orasini ochirib tashlaydi  
+del animals[2:4]   # del belgilangan indexlar orasini ochirib tashlaydi
 print("animals delete: ", animals)
 
 exit = animals.index("cat")   # qiymat listni ichida bolsa indexini chiqazadi
@@ -82,10 +81,11 @@ else:
 
 print("--------")
 numbers = [2, 20, 12, 8, 57]
-numbers.sort()   #. listimizni qiymatlarini tartiblab beradi
+numbers.sort()  # . listimizni qiymatlarini tartiblab beradi
 print("numbers sort: ", numbers)
 
-numbers.sort(reverse=True)  # . listimizni qiymatlarini teskari tartibda qilib beradi
+# . listimizni qiymatlarini teskari tartibda qilib beradi
+numbers.sort(reverse=True)
 print("sort reverse: ", numbers)
 
 
@@ -98,6 +98,7 @@ print(f"th sorted numbs: {numbs} and new_numbs: {new_numbs}")
 print("======== Lambda function =========")
 # lambda is small anonymous function!
 def calculate(x, y): return x * y
+
 
 result = calculate(3, 5)
 print("result: ", result)
@@ -122,13 +123,12 @@ print("======== Enumerate, map and filter =========")
 
 animals = ["dog", "cat"]
 for element in enumerate(animals):   # valueni Indexini ham oilib beradi
-     print("element: ", element)
+    print("element: ", element)
 
 
 print("--------")
-for (index, value) in enumerate(animals):   # 
+for (index, value) in enumerate(animals):   #
     print(f"the index: {index}, value: {value}")
-
 
 
 # similar in dictionary
@@ -168,4 +168,3 @@ print("---- filter ----")
 result_filter = filter(lambda car: car[1] > 80, cars)
 print(f"the result_filter: {result_filter} and type: {type(result_filter)}")
 print(list(result_filter))
-
