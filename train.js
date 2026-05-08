@@ -1,14 +1,38 @@
+// J-TASK (NodeJS)
+
+// Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
+// MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4
+// masalani yechish:
+function majorityElement(arr) {
+    let count = [];
+    let maxNum = 0;
+    let result = 0;
+
+    for(let num of arr) {
+        count[num] = (count[num] || 0) + 1;
+        if(count[num] > maxNum) {
+            maxNum = count[num];
+            result = num
+        }
+    }
+    return result;
+}
+console.log(`The majorityElement:`, majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+
+
+
 // H-TASK (NodeJS)
 
 // shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
 // MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 // masalani yechish
 
-function getPositive(arr) {
-    return arr.filter(num => num > 0).join("")
-}
+// function getPositive(arr) {
+//     return arr.filter(num => num > 0).join("")
+// }
 
-console.log("the result: ", getPositive([1, -4, 2]));
+// console.log("the result: ", getPositive([1, -4, 2]));
 
 // F-TASK (NodeJS)
 

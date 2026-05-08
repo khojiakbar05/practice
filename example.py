@@ -190,128 +190,215 @@
 # print(list(zipped))
 
 
-# list comprehensions: a)
-numbers = [1, 2, 4, 2, 1, 20]
-list_numbers = [*numbers]
+# # list comprehensions: a)
+# numbers = [1, 2, 4, 2, 1, 20]
+# list_numbers = [*numbers]
 
-print(f"list_numbers: {list_numbers}, and type: {type(list_numbers)}")
-print(numbers is list_numbers)
+# print(f"list_numbers: {list_numbers}, and type: {type(list_numbers)}")
+# print(numbers is list_numbers)
 
-print(id(numbers), id(list_numbers))
+# print(id(numbers), id(list_numbers))
 
-list_numbers = numbers
-print(id(numbers), id(list_numbers))
-print(numbers is list_numbers)
-
-
-# list comprehensions: b)
-people = [("Robert", 20), ("Steve", 19), ("Joseph", 25)]
-# list_people = map(lambda person: person[0], people)
-# print("people's name: ", list(list_people))
-list_person = [person[1] for person in people]
-print(list_person)
+# list_numbers = numbers
+# print(id(numbers), id(list_numbers))
+# print(numbers is list_numbers)
 
 
-# list comprehensions: c)
-cars = [
-    ("Ferrari", 78),
-    ("Toyota", 87),
-    ("Audi", 116),
-    ("BMW", 109),
-    ("Pagani", 33)
-]
-
-# list_cars = [car[0] for car in cars]
-# print("list_cars: ", list_cars)
-
-# list_cars = map(lambda car: car[0], cars)
-# print("list car in lambda: ",  list(list_cars))
+# # list comprehensions: b)
+# people = [("Robert", 20), ("Steve", 19), ("Joseph", 25)]
+# # list_people = map(lambda person: person[0], people)
+# # print("people's name: ", list(list_people))
+# list_person = [person[1] for person in people]
+# print(list_person)
 
 
-print("========== Set and List comprehension ============")
+# # list comprehensions: c)
+# cars = [
+#     ("Ferrari", 78),
+#     ("Toyota", 87),
+#     ("Audi", 116),
+#     ("BMW", 109),
+#     ("Pagani", 33)
+# ]
 
-numbs = [1, 5, 4, 20, 4, 5, 1, 4]
-set_numbers = {*numbs}
+# # list_cars = [car[0] for car in cars]
+# # print("list_cars: ", list_cars)
 
-print(f"set_numbers: {set_numbers}, and type: {type(set_numbers)}")
-
-
-# b version
-dict_person_list = [person[0] for person in people]
-print(f"dict_person_list: {dict_person_list}, and type: {type(dict_person_list)}")
-
-dict_person_dict = {person[0]: person[1] for person in people}
-print(f"dict_person_dict: {dict_person_dict}, and {type(dict_person_dict)}")
-
-
-# c version
-dict_person = {person[0]: person[1] for person in people if person[1] > 20}
-print(f"dict_person: {dict_person}, and type: {type(dict_person)}")
-
-dict_person_filter = filter(lambda person: person[1] > 20, people)
-print(f"dict_person_filter: {list(dict_person_filter)} and type: {type(dict_person_filter)}")
+# # list_cars = map(lambda car: car[0], cars)
+# # print("list car in lambda: ",  list(list_cars))
 
 
-import turtle
+# print("========== Set and List comprehension ============")
 
-# Ekranni sozlash
-screen = turtle.Screen()
-screen.bgcolor("#f0f8ff")
-screen.title("Python Turtle Pizza")
+# numbs = [1, 5, 4, 20, 4, 5, 1, 4]
+# set_numbers = {*numbs}
 
-t = turtle.Turtle()
-t.speed(13)  # Eng tez chizish
+# print(f"set_numbers: {set_numbers}, and type: {type(set_numbers)}")
 
 
-def draw_circle(radius, color, border_color, x, y):
-    t.penup()
-    t.goto(x, y - radius)
-    t.pendown()
-    t.color(border_color, color)
-    t.begin_fill()
-    t.circle(radius)
-    t.end_fill()
+# # b version
+# dict_person_list = [person[0] for person in people]
+# print(f"dict_person_list: {dict_person_list}, and type: {type(dict_person_list)}")
+
+# dict_person_dict = {person[0]: person[1] for person in people}
+# print(f"dict_person_dict: {dict_person_dict}, and {type(dict_person_dict)}")
 
 
-# 1. Pissa xamiri (Crest)
-draw_circle(160, "#D2691E", "#8B4513", 0, 0)
+# # c version
+# dict_person = {person[0]: person[1] for person in people if person[1] > 20}
+# print(f"dict_person: {dict_person}, and type: {type(dict_person)}")
 
-# 2. Pishloq va sous (Cheese)
-draw_circle(145, "#FFD700", "#FF8C00", 0, 0)
+# dict_person_filter = filter(lambda person: person[1] > 20, people)
+# print(f"dict_person_filter: {list(dict_person_filter)} and type: {type(dict_person_filter)}")
 
-# 3. Pissa bo'laklari (Slices)
-t.color("#8B4513")
-t.pensize(2)
-for i in range(8):
-    t.penup()
-    t.goto(0, 0)
-    t.setheading(i * 45)
-    t.pendown()
-    t.forward(145)
 
-# 4. Pepperoni (Kolbasalar)
-pepperoni_locs = [
-    (60, 60), (-60, 60), (60, -60), (-60, -60),
-    (100, 0), (-100, 0), (0, 100), (0, -100)
-]
-for x, y in pepperoni_locs:
-    draw_circle(20, "#B22222", "#800000", x, y)
+# import turtle
 
-# 5. Zaytun donachalari (Olives)
-olive_locs = [
-    (30, 30), (-30, 30), (30, -30), (-30, -30),
-    (80, 40), (-80, -40), (40, 80), (-40, -80)
-]
-for x, y in olive_locs:
-    draw_circle(5, "#2F4F4F", "black", x, y)
+# # Ekranni sozlash
+# screen = turtle.Screen()
+# screen.bgcolor("#f0f8ff")
+# screen.title("Python Turtle Pizza")
 
-# Markazdagi kichik turtle belgisi (Oshpaz)
-t.penup()
-t.goto(0, -10)
-t.color("green")
-t.shape("turtle")
-t.stamp()
+# t = turtle.Turtle()
+# t.speed(13)  # Eng tez chizish
 
-t.hideturtle()
-print("Pissa tayyor! Yoqimli ishtaha!")
-turtle.done()
+
+# def draw_circle(radius, color, border_color, x, y):
+#     t.penup()
+#     t.goto(x, y - radius)
+#     t.pendown()
+#     t.color(border_color, color)
+#     t.begin_fill()
+#     t.circle(radius)
+#     t.end_fill()
+
+
+# # 1. Pissa xamiri (Crest)
+# draw_circle(160, "#D2691E", "#8B4513", 0, 0)
+
+# # 2. Pishloq va sous (Cheese)
+# draw_circle(145, "#FFD700", "#FF8C00", 0, 0)
+
+# # 3. Pissa bo'laklari (Slices)
+# t.color("#8B4513")
+# t.pensize(2)
+# for i in range(8):
+#     t.penup()
+#     t.goto(0, 0)
+#     t.setheading(i * 45)
+#     t.pendown()
+#     t.forward(145)
+
+# # 4. Pepperoni (Kolbasalar)
+# pepperoni_locs = [
+#     (60, 60), (-60, 60), (60, -60), (-60, -60),
+#     (100, 0), (-100, 0), (0, 100), (0, -100)
+# ]
+# for x, y in pepperoni_locs:
+#     draw_circle(20, "#B22222", "#800000", x, y)
+
+# # 5. Zaytun donachalari (Olives)
+# olive_locs = [
+#     (30, 30), (-30, 30), (30, -30), (-30, -30),
+#     (80, 40), (-80, -40), (40, 80), (-40, -80)
+# ]
+# for x, y in olive_locs:
+#     draw_circle(5, "#2F4F4F", "black", x, y)
+
+# # Markazdagi kichik turtle belgisi (Oshpaz)
+# t.penup()
+# t.goto(0, -10)
+# t.color("green")
+# t.shape("turtle")
+# t.stamp()
+
+# t.hideturtle()
+# print("Pissa tayyor! Yoqimli ishtaha!")
+# turtle.done()
+
+
+# # 1 masala
+# def get_digits(str):
+#       result = ""
+
+#       for num in str:
+#             if num.isdigit():
+#                    result += num
+
+#       return result
+
+
+# print(f"the numbers: {get_digits("Khoji2005")}")
+
+
+# #  2 masala
+# def get_upper(str):
+#      result = ""
+
+#      for upLetter in str:
+#             if upLetter.isupper():
+#                    result += upLetter
+
+#      return result
+
+
+# print(f"the Upper letters: {get_upper("jhsHbhEjkahLLnisjO")}")
+
+
+# # 3 masala
+# def sum_even(arr):
+#      result = 0
+
+#      for even in arr:
+#             if even % 2 == 0:
+#                    result += even
+#      return result
+
+# # def sum_even(arr):
+# #       return sum(num for num in arr if num % 2 == 0)
+
+# print(f"sum even num: {sum_even([1, 2, 3, 4, 5, 6])}")
+
+
+# # 4 masala
+# def get_even(arr):
+#       result = []
+
+#       for even in arr:
+#             if even % 2 == 0:
+#                   result.append(even)
+
+#       return result
+
+# print(f"the even num: {get_even([1, 2, 3, 4, 5 ,5, 6])}")
+
+
+# #  using methods:
+
+# lower = "   Hello World.  "
+# print(f"the lower: {lower.lower()}")
+# print(f"the strip: {lower.strip()}")
+# print(f"the split: {lower.split()}")
+# print(f"the join: {'-'.join(lower.split())}")
+
+
+# #  5 masala
+# def clean_text(text):
+#             return text.strip().lower()
+
+# print(f"Clean text: {clean_text('   Hello World.  ')}")
+
+
+# def count_words(words):
+#        count = words.split()
+#        return len(count)
+
+# print(f"the number of words: {count_words("Hello I am learning pyhton")}")
+
+
+
+array = [21, 13, 21, 45, 13, 10, 45]
+print(f"sorted {array.sort()}")
+
+
+

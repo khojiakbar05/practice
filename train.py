@@ -3,17 +3,17 @@
 # Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
 # MASALAN: get_digits("m14i1t") return qiladi "141"
 #  masalani yechish
-def get_digits(str):
-    result = ""
+# def get_digits(str):
+#     result = ""
 
-    for num in str:
-        if num.isdigit():
-            result += num
+#     for num in str:
+#         if num.isdigit():
+#             result += num
 
-    return result
+#     return result
 
 
-print(f"the numbers: {get_digits("m14i1t")}")
+# print(f"the numbers: {get_digits("m14i1t")}")
 
 
 # G-TASK(PYTHON)
