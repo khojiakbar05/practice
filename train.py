@@ -1,3 +1,25 @@
+# K-TASK(PYTHON)
+
+# Shunday function yozing, u string qabul qilsin va string ichidagi eng uzun sozni qaytarsin.
+# MASALAN: find_longest("I come from Uzbekistan") return "Uzbekistan"
+# masalani yechish
+def find_longest(str):
+       words = str.split()    
+       longest_word = ""
+
+       for word in words:
+              if len(word) > len(longest_word):
+                     longest_word = word
+
+       return longest_word
+      
+ 
+print(f"The longest word: {find_longest("I come from Uzbekistan")}")
+ 
+  
+  
+
+
 # I-TASK(PYTHON)
 
 # Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
