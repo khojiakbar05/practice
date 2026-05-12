@@ -397,8 +397,5 @@
 
 
 
-array = [21, 13, 21, 45, 13, 10, 45]
-print(f"sorted {array.sort()}")
-
 
 

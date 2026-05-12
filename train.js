@@ -1,23 +1,40 @@
+// L-TASK (NodeJS)
+
+// Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin.
+// MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
+// masalani yechish:
+
+function reverseSentence(str) {
+    return str.split(` `).map(word => word.split(``).reverse().join(``)).join(` `);
+}
+
+console.log(`Reversed sentence: `, reverseSentence("We like coding"));
+
+
+
+
+
+
 // J-TASK (NodeJS)
 
 // Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
 // MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4
 // masalani yechish:
-function majorityElement(arr) {
-    let count = [];
-    let maxNum = 0;
-    let result = 0;
+// function majorityElement(arr) {
+//     let count = [];
+//     let maxNum = 0;
+//     let result = 0;
 
-    for(let num of arr) {
-        count[num] = (count[num] || 0) + 1;
-        if(count[num] > maxNum) {
-            maxNum = count[num];
-            result = num
-        }
-    }
-    return result;
-}
-console.log(`The majorityElement:`, majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+//     for(let num of arr) {
+//         count[num] = (count[num] || 0) + 1;
+//         if(count[num] > maxNum) {
+//             maxNum = count[num];
+//             result = num
+//         }
+//     }
+//     return result;
+// }
+// console.log(`The majorityElement:`, majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 
 
 
