@@ -3,17 +3,17 @@
 # Shunday function yozing, u har xil valuelardan iborat array qabul qilsin va List ichidagi sonlar yigindisini hisoblab chiqqan javobni qaytarsin.
 # MASALAN: calculate_summary([10, "10", {son: 10}, true, 35]) return 45
 # Masalani yechish:
-def calculate_summary(arr):
-       summary = 0
+# def calculate_summary(arr):
+#        summary = 0
 
-       for ele in arr:
-              if type(ele) == int:
-                     summary += ele
+#        for ele in arr:
+#               if type(ele) == int:
+#                      summary += ele
 
-       return summary
+#        return summary
 
 
-print(f"The calculate_summary: {calculate_summary([10, "10", {"son": 10}, True, 35])}")
+# print(f"The calculate_summary: {calculate_summary([10, "10", {"son": 10}, True, 35])}")
 
 
 

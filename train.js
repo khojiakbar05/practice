@@ -1,18 +1,40 @@
+//git commit -m "feat: P-TASK (NodeJS) DONE!" 
+
+// Shunday function yozing, u object qabul qilsin va arrayni object arrayga otkazib arrayni qaytarsin qaytarsin.
+// MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+// Masalani Yechish:
+ function objectArray(obj) {
+    const object = []
+
+    for (let key in obj) {
+        object.push([key, obj[key]])
+    }
+    return object
+ }
+const result = objectArray({ a: 10, b: 20 });
+console.log("objectArray: ", result);
+
+ 
+
+
+
+
+
 // N-TASK (NodeJS)
 
 // Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin va array ichidagi har bir raqam uchun raqamni ozi va hamda osha raqamni kvadratidan tashkil topgan object hosil qilib, hosil bolgan objectlarni array ichida qaytarsin.
 // MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
 // masalani yechish
-function getSquareNumbers(arr) {
-    return arr.map( num => {
-        return {
-            number: num,
-            square: num * num
-        };
-    });
-}
+// function getSquareNumbers(arr) {
+//     return arr.map( num => {
+//         return {
+//             number: num,
+//             square: num * num
+//         };
+//     });
+// }
 
-console.log("Numbers: ", getSquareNumbers([1, 2, 3]));
+// console.log("Numbers: ", getSquareNumbers([1, 2, 3]));
 
 
 
@@ -111,7 +133,7 @@ console.log("Numbers: ", getSquareNumbers([1, 2, 3]));
 // MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
 
 // masalani yechimi
-// function getHighestIndex(arr) {
+// function getHighestIndex(arr) {f
 //   let max = 0;
 //   let maxIndex = [0];
 
